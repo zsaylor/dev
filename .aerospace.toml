@@ -38,12 +38,28 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'whatsapp'
-run = 'layout floating'
+	if.app-name-regex-substring = 'whatsapp'
+	run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'finder'
-run = 'layout floating'
+	if.app-name-regex-substring = 'finder'
+	run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'safari'
+    run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'ghostty'
+    run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'spotify'
+    run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'obsidian'
+    run = ['move-node-to-workspace 4']
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -138,7 +154,7 @@ run = 'layout floating'
     alt-g = 'workspace G'
     alt-i = 'workspace I'
     alt-m = 'workspace M'
-    alt-n = 'workspace N' disabled to use ghostty new window
+    alt-n = 'workspace N'
     alt-o = 'workspace O'
     alt-p = 'workspace P'
     alt-q = 'workspace Q'
